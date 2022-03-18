@@ -1,0 +1,26 @@
+@mixin position-absolute($vertical, $horizontal, $offset: 0) {
+    position: absolute;
+    @if ($vertical == "t") {
+        top: $offset;
+    }
+    @if ($vertical == "c") {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    @if ($vertical == "b") {
+        bottom: $offset;
+    }
+    @if ($horizontal == "r") {
+        right: $offset;
+    }
+    @if ($horizontal == "c") {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    @if ($horizontal == "l") {
+        left: $offset;
+    }
+    @if ($horizontal == "c" and $vertical == "c") {
+        transform: translate(-50%, -50%);
+    }
+}

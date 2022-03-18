@@ -1,0 +1,50 @@
+{
+    "ListView": [
+        {
+            "name": "Hide empty",
+            "type": "Toggle",
+            "description": "Hides the 'no items found' in empty lists.",
+            "class": "listview-hide-empty"
+        },
+        {
+            "name": "Hide load more",
+            "type": "Toggle",
+            "description": "Hides the 'load more' button in lists.",
+            "class": "listview-hide-load-more"
+        },
+        {
+            "name": "Style",
+            "type": "Dropdown",
+            "description": "Change the appearance of rows in the list view.",
+            "options": [
+                {
+                    "name": "Inline",
+                    "class": "listview-inline listview-stylingless"
+                },
+                {
+                    "name": "Inline block",
+                    "class": "listview-inline-block listview-stylingless"
+                },
+                {
+                    "name": "Flex",
+                    "class": "listview-flex listview-stylingless"
+                }
+            ]
+        },
+        {
+            "name": "Advanced style",
+            "type": "Dropdown",
+            "description": "More advanced styling properties for listviews.",
+            "options": [
+                {
+                    "name": "Bullets",
+                    "class": "listview-bullets"
+                },
+                {
+                    "name": "Comma separated",
+                    "class": "listview-comma-separated"
+                }
+            ]
+        }
+    ]
+}

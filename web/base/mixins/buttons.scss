@@ -1,0 +1,8 @@
+@mixin button-round($size, $bg-color, $color) {
+    border-radius: 50%;
+    background: $bg-color;
+    color: $color;
+    width: $size;
+    height: $size;
+    line-height: $size;
+}
