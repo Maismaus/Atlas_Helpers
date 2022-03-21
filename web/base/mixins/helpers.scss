@@ -1,0 +1,40 @@
+@mixin misc-helpers() {
+    .hover-parent {
+        .hover-child {
+            display: none;
+        }
+        &:hover .hover-child {
+            display: inherit !important;
+        }
+    }
+
+    //There is a delay on hide when using visibility: hidden, so instead we use opacity which works instantly
+    .visibility-parent {
+        &:hover .visibility-child {
+            opacity: 1;
+        }
+        .visibility-child {
+            opacity: 0;
+        }
+    }
+
+    .flex-1 {
+        flex: 1;
+    }
+
+    .flex-2 {
+        flex: 2;
+    }
+
+    .position-relative {
+        position: relative !important;
+    }
+
+    .validation-helper {
+        label,
+        input,
+        select {
+            display: none;
+        }
+    }
+}
