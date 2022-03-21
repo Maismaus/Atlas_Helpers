@@ -1,12 +1,36 @@
+@import "../../../theme/web/atlas-helpers-settings";
 @import "../../../theme/web/custom-variables";
 @import "variables";
+@import "mixins";
 
-@import "base/mixins/buttons";
-@import "base/mixins/position";
+@if $include-misc-helpers {
+    @include misc-helpers();
+}
 
-@import "core/helpers/dataview";
-@import "core/helpers/helpers";
-@import "core/helpers/inputs";
-@import "core/helpers/listview";
+@if $include-listview-helpers {
+    @include listview-helpers();
+}
 
-@import "core/widgets/datagrid";
+@if $improve-grid-searchbar {
+    @include improve-grid-searchbar(200px);
+}
+
+@if $include-dataview-sticky-footer {
+    @include dataview-sticky-footer();
+}
+
+@if $reverse-dataview-controls {
+    @include reverse-dataview-controls();
+}
+
+@if $include-position-absolute-helpers {
+    $v-alignments: "t", "c", "r";
+    $h-alignments: "l", "c", "r";
+    @each $v-alignment in $v-alignments {
+        @each $h-alignment in $h-alignments {
+            .pa-#{$v-alignment}#{$h-alignment} {
+                @include position-absolute($v-alignment, $h-alignment);
+            }
+        }
+    }
+}
