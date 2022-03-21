@@ -24,3 +24,9 @@
         transform: translate(-50%, -50%);
     }
 }
+
+@mixin position-sticky($top: 0, $zindex: 10) {
+    position: sticky;
+    z-index: $zindex;
+    top: $top;
+}
